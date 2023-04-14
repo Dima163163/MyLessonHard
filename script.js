@@ -1,4 +1,4 @@
-let num = 266219;
+const num = 266219;
 
 const arr = Array.from(String(num));
 
@@ -12,7 +12,7 @@ const result = arrNumb.reduce((a, b) => a * b);
 
 console.log(result);
 
-let deg = result ** 3;
+const deg = result ** 3;
 
 console.log(deg);
 
