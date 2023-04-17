@@ -2,59 +2,7 @@
 
 let lang = prompt("Какой язык выберете?");
 
-if (lang == "ru") {
-  console.log(
-    "Понедельник",
-    "Вторник",
-    "Среда",
-    "Четверг",
-    "Пятница",
-    "Суббота",
-    "Воскресенье"
-  );
-} else if (lang == "en") {
-  console.log(
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday"
-  );
-} else if (lang !== "ru" && lang !== "en") {
-  console.log("Ошибка");
-}
-
-switch (lang) {
-  case "ru":
-    console.log(
-      "Понедельник",
-      "Вторник",
-      "Среда",
-      "Четверг",
-      "Пятница",
-      "Суббота",
-      "Воскресенье"
-    );
-    break;
-  case "en":
-    console.log(
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    );
-    break;
-  default:
-    console.log("Ошибка");
-    break;
-}
-
-let arrLang = {
+const langArr = {
   ru: [
     "Понедельник",
     "Вторник",
@@ -75,8 +23,28 @@ let arrLang = {
   ],
 };
 
-console.log(arrLang["ru"]);
-console.log(arrLang["en"]);
+if (lang == "ru") {
+  console.log(langArr["ru"]);
+} else if (lang == "en") {
+  console.log(langArr["en"]);
+} else if (lang !== "ru" && lang !== "en") {
+  console.log("Ошибка");
+}
+
+switch (lang) {
+  case "ru":
+    console.log(langArr["ru"]);
+    break;
+  case "en":
+    console.log(langArr["en"]);
+    break;
+  default:
+    console.log("Ошибка");
+    break;
+}
+
+console.log(langArr["ru"]);
+console.log(langArr["en"]);
 
 let namePerson = prompt("Введите имя:");
 namePerson == "Артем"
