@@ -2,9 +2,24 @@
 
 let lang = prompt("Какой язык выберете?");
 
-let map = new Map([
-  ["ru", "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье"],
-  ["en", "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"],
+let map = new Map();
+map.set("ru", [
+  "Понедельник",
+  "Вторник",
+  "Среда",
+  "Четверг",
+  "Пятница",
+  "Суббота",
+  "Воскресенье",
+]);
+map.set("en", [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
 ]);
 
 if (lang == "ru") {
@@ -29,9 +44,6 @@ switch (lang) {
 
 console.log(map.get("ru"));
 console.log(map.get("en"));
-
-console.log(langArr["ru"]);
-console.log(langArr["en"]);
 
 let namePerson = prompt("Введите имя:");
 namePerson == "Артем"
