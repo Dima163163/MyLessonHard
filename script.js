@@ -49,11 +49,7 @@ switch (lang) {
     break;
 }
 
-lang == "ru"
-  ? console.log(map.get("ru"))
-  : lang == "en"
-  ? console.log(map.get("en"))
-  : console.log("Ошибка");
+console.log(map.get(lang));
 
 let namePerson = prompt("Введите имя:");
 namePerson == "Артем"
