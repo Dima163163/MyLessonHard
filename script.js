@@ -7,7 +7,8 @@ function newFunc(arg) {
   } else {
     arg = arg.trim();
     if (arg.length >= 29) {
-      return (arg = arg.slice(0, 29) + "...");
+      arg = arg.slice(0, 29) + "...";
+      return arg;
     } else {
       return arg;
     }
