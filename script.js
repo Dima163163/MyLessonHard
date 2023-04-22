@@ -1,3 +1,4 @@
+"use strict";
 let arr = ["12", "424", "26", "56", "28", "484", "652"];
 
 arr.forEach((number) => {
