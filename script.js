@@ -1,37 +1,16 @@
 "use strict";
 window.onload = function () {
   window.setInterval(function () {
-    let myDate = new Date();
+    const myDate = new Date();
 
     let currentTime = myDate.toLocaleTimeString();
     let hour = myDate.getHours();
     let minute = myDate.getMinutes();
     let second = myDate.getSeconds();
     let message = "";
-    let days = [
-      "Понедельник",
-      "Вторник",
-      "Среда",
-      "Четверг",
-      "Пятница",
-      "Суббота",
-      "Воскресенье",
-    ];
+    let days = myDate.toLocaleString("ru", { weekday: "long" });
 
-    let months = [
-      "Января",
-      "Февраля",
-      "Марта",
-      "Апреле",
-      "Мая",
-      "Июня",
-      "Июля",
-      "Августа",
-      "Сентября",
-      "Октября",
-      "Ноября",
-      "Декабря",
-    ];
+    let months = myDate.toLocaleString("ru", { month: "long" });
 
     function timeName(number, one, two, five) {
       let n = Math.abs(number);
@@ -63,11 +42,11 @@ window.onload = function () {
 
     message +=
       "Сегодня: " +
-      days[myDate.getDate() - 1] +
+      days +
       ", " +
       myDate.getDate() +
       " " +
-      months[myDate.getMonth()] +
+      timeName(months, "май", "мая", "мая") +
       " " +
       myDate.getFullYear() +
       ", " +
