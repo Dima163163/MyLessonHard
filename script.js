@@ -8,9 +8,13 @@ window.onload = function () {
     let minute = myDate.getMinutes();
     let second = myDate.getSeconds();
     let message = "";
-    let days = myDate.toLocaleString("ru", { weekday: "long" });
+    let days = myDate.toLocaleString("ru", {
+      weekday: "long",
+    });
 
-    let months = myDate.toLocaleString("ru", { month: "long" });
+    let daysNew = days.toUpperCase()[0] + days.slice(1).toLowerCase();
+
+    let months = myDate.toLocaleString("ru-RU", { month: "long" });
 
     function timeName(number, one, two, five) {
       let n = Math.abs(number);
@@ -42,11 +46,11 @@ window.onload = function () {
 
     message +=
       "Сегодня: " +
-      days +
+      daysNew +
       ", " +
       myDate.getDate() +
       " " +
-      timeName(months, "май", "мая", "мая") +
+      timeName(months, "Май", "Мая", "Мая") +
       " " +
       myDate.getFullYear() +
       ", " +
